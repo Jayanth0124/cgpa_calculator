@@ -30,7 +30,8 @@ body {
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    width: 320px; /* Adjusted width */
+    width: 350px; /* Fixed width */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
     text-align: center;
     position: relative;
     max-width: 100%; /* Ensure it doesn't overflow on small screens */
@@ -49,12 +50,11 @@ h1 {
     font-weight: bold;
 }
 
-/* Other styles... */
-
+/* Form and input styles */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Adjusted space between fields */
+    gap: 15px; /* Space between fields */
 }
 
 .input-wrapper {
@@ -218,12 +218,17 @@ form {
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
+    body {
+        overflow: auto; /* Allow scrolling if necessary */
+    }
+
     .container {
-        width: 90%; /* Make sure it fits within the viewport */
+        width: 100%; /* Full width on small screens */
+        padding: 15px; /* Adjust padding */
     }
 
     .logo {
-        width: 150px; /* Smaller logo for small screens */
+        width: 150px; /* Adjust logo size for smaller screens */
     }
 
     h1 {
