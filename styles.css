@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.grid {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #0f0f10 1px, transparent 1px),
+                      linear-gradient(to bottom, #0f0f10 1px, transparent 1px);
+    background-size: 1rem 1rem;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.container {
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    width: 320px; /* Adjusted width */
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 180px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 20px; /* Center the logo and add space below */
+    display: block; /* Center the logo horizontally */
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Other styles... */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adjusted space between fields */
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between input boxes */
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-layer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow {
+    max-height: 130px;
+    max-width: 354px;
+    filter: blur(30px);
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+}
+
+.glow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 999px;
+    height: 999px;
+    transform: translate(-50%, -50%) rotate(60deg);
+    background-image: conic-gradient(
+        #000,
+        #402fb5 5%,
+        #000 38%,
+        #000 50%,
+        #cf30aa 60%,
+        #000 87%
+    );
+    transition: all 2s;
+}
+
+.input {
+    background-color: #010201;
+    border: none;
+    width: 100%; /* Full width of container */
+    height: 56px;
+    border-radius: 10px;
+    color: white;
+    padding-inline: 15px;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+.input::placeholder {
+    color: #c0b9c0;
+}
+.input:focus {
+    outline: none;
+}
+
+.input-container:hover .glow::before {
+    transform: translate(-50%, -50%) rotate(-120deg);
+}
+.input-container:focus-within .glow::before {
+    transform: translate(-50%, -50%) rotate(420deg);
+    transition: all 4s;
+}
+
+.Btn-Container {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    background-color: #1d2129;
+    border-radius: 22px;
+    box-shadow: 0px 5px 10px #bebebe;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.Btn-Container:hover {
+    background-color: #2c313a;
+}
+
+.icon-Container {
+    width: 35px;
+    height: 35px;
+    background-color: #f59aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #1d2129;
+}
+
+.text {
+    width: calc(100% - 35px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.icon-Container svg {
+    transition-duration: 1.5s;
+}
+
+.Btn-Container:hover .icon-Container svg {
+    transition-duration: 1.5s;
+    animation: arrow 1s linear infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        margin-left: 0px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 10px;
+    }
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#cgpa-value-container {
+    background: #333; /* Container background color */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    display: inline-block; /* Fit to content size */
+}
+
+#cgpa-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff; /* Text color */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Slight shadow for text */
+    margin: 0; /* Remove default margin */
+}
+
+
