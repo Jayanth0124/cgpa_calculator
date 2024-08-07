@@ -13,9 +13,6 @@ body {
     overflow: hidden; /* Prevent scrolling */
 }
 
-
-
-
 .grid {
     height: 100%;
     width: 100%;
@@ -36,6 +33,7 @@ body {
     width: 320px; /* Adjusted width */
     text-align: center;
     position: relative;
+    max-width: 100%; /* Ensure it doesn't overflow on small screens */
 }
 
 .logo {
@@ -45,7 +43,6 @@ body {
     display: block; /* Center the logo horizontally */
 }
 
-
 h1 {
     margin-bottom: 20px;
     font-size: 1.5em;
@@ -53,7 +50,6 @@ h1 {
 }
 
 /* Other styles... */
-
 
 form {
     display: flex;
@@ -220,4 +216,26 @@ form {
     margin: 0; /* Remove default margin */
 }
 
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Make sure it fits within the viewport */
+    }
 
+    .logo {
+        width: 150px; /* Smaller logo for small screens */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Adjust font size for small screens */
+    }
+
+    .Btn-Container {
+        height: 40px; /* Adjust button height */
+        border-radius: 20px;
+    }
+
+    .text {
+        font-size: 0.9em; /* Adjust text size within buttons */
+    }
+}
