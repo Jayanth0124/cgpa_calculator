@@ -9,7 +9,6 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    overflow: hidden;
 }
 
 .grid {
@@ -222,10 +221,4 @@ form {
         width: 90vw; /* Adjust width for smaller screens */
         padding: 10px; /* Reduce padding */
     }
-}
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Hide overflow on body */
 }
