@@ -9,7 +9,9 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
+
 
 .grid {
     height: 100%;
@@ -28,10 +30,13 @@ body {
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    width: 320px; /* Adjusted width */
+    width: 90vw;
+    max-width: 320px;
     text-align: center;
     position: relative;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height calculations */
 }
+
 
 .logo {
     width: 180px; /* Adjust the width as needed */
@@ -216,3 +221,9 @@ form {
 }
 
 
+@media (max-width: 480px) {
+    .container {
+        width: 90vw; /* Adjust width for smaller screens */
+        padding: 10px; /* Reduce padding */
+    }
+}
