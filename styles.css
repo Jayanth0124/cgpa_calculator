@@ -34,14 +34,15 @@ body {
   /* Glassmorphism container */
   .container {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(7px); /* Blur for glass effect */
+    backdrop-filter: blur(10px); /* Blur for glass effect */
     border-radius: 20px;
     padding: 30px;
     width: 100%;
-    max-width: 400px; /* Reduced size */
+    max-width: 400px; /* Adjusted for desktop */
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5), 
                 inset 1px 1px 8px rgba(255, 255, 255, 0.2); /* Outer shadow */
     text-align: center;
+    margin: 0 10px; /* Margin for mobile responsiveness */
   }
   
   /* Styling for logo */
@@ -117,6 +118,8 @@ body {
   @media screen and (max-width: 768px) {
     .container {
       padding: 20px;
+      margin: 20px; /* Margin to prevent touching the sides */
+      max-width: calc(100% - 40px); /* Ensure it doesn't exceed viewport width */
     }
   
     .logo {

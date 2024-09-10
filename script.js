@@ -25,7 +25,7 @@ function calculateCGPA() {
     document.getElementById('cgpa-value').textContent = cgpa;
 }
 
-// Set initial values to 0
+// Set initial values to 0 on page load
 window.onload = function() {
     document.getElementById('sgrade').value = 0;
     document.getElementById('agrade').value = 0;
@@ -33,5 +33,4 @@ window.onload = function() {
     document.getElementById('cgrade').value = 0;
     document.getElementById('dgrade').value = 0;
     document.getElementById('egrade').value = 0;
-    document.getElementById('cgpa-value').textContent = '0.00';
 }
