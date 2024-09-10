@@ -1,34 +1,37 @@
 function calculateCGPA() {
-    // Simulate a delay for the calculation (remove if not needed)
-    setTimeout(() => {
-        const S = parseInt(document.getElementById('S').value, 10);
-        const A = parseInt(document.getElementById('A').value, 10);
-        const B = parseInt(document.getElementById('B').value, 10);
-        const C = parseInt(document.getElementById('C').value, 10);
-        const D = parseInt(document.getElementById('D').value, 10);
-        const E = parseInt(document.getElementById('E').value, 10);
+    const S = parseInt(document.getElementById('sgrade').value, 10) || 0;
+    const A = parseInt(document.getElementById('agrade').value, 10) || 0;
+    const B = parseInt(document.getElementById('bgrade').value, 10) || 0;
+    const C = parseInt(document.getElementById('cgrade').value, 10) || 0;
+    const D = parseInt(document.getElementById('dgrade').value, 10) || 0;
+    const E = parseInt(document.getElementById('egrade').value, 10) || 0;
 
-        // Define the points for each grade
-        const points = {
-            S: 10,
-            A: 9,
-            B: 8,
-            C: 7,
-            D: 6,
-            E: 5
-        };
+    const points = {
+        S: 10,
+        A: 9,
+        B: 8,
+        C: 7,
+        D: 6,
+        E: 5
+    };
 
-        // Calculate total points
-        const totalPoints = (S * points.S) + (A * points.A) + (B * points.B) +
-                             (C * points.C) + (D * points.D) + (E * points.E);
+    const totalPoints = (S * points.S) + (A * points.A) + (B * points.B) +
+                        (C * points.C) + (D * points.D) + (E * points.E);
 
-        // Calculate total subjects
-        const totalSubjects = S + A + B + C + D + E;
+    const totalSubjects = S + A + B + C + D + E;
 
-        // Calculate CGPA
-        const cgpa = totalSubjects > 0 ? (totalPoints / totalSubjects).toFixed(2) : 0.00;
+    const cgpa = totalSubjects > 0 ? (totalPoints / totalSubjects).toFixed(2) : 0.00;
 
-        // Display CGPA
-        document.getElementById('cgpa-value').textContent = cgpa;
-    }, 1000); // 1 second delay for simulation
+    document.getElementById('cgpa-value').textContent = cgpa;
+}
+
+// Set initial values to 0
+window.onload = function() {
+    document.getElementById('sgrade').value = 0;
+    document.getElementById('agrade').value = 0;
+    document.getElementById('bgrade').value = 0;
+    document.getElementById('cgrade').value = 0;
+    document.getElementById('dgrade').value = 0;
+    document.getElementById('egrade').value = 0;
+    document.getElementById('cgpa-value').textContent = '0.00';
 }

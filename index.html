@@ -1,97 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGPA Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background grid -->
-    <div class="grid"></div>
-
-    <!-- Main container for form -->
-    <div class="container">
-        <!-- Logo at the top center -->
-        <img src="logo.png" alt="Logo" class="logo">
-
-        <h1>CGPA Calculator</h1>
-        <form id="cgpa-form">
-            <div class="input-wrapper">
-                <div class="input-container">
-                    <div class="input-layer">
-                        <div class="glow"></div>
-                        <label for="S">S Grade</label>
-                        <input type="number" id="S" name="S" min="0" value="0" class="input">
-                    </div>
-                </div>
-                <div class="input-container">
-                    <div class="input-layer">
-                        <div class="glow"></div>
-                        <label for="A">A Grade</label>
-                        <input type="number" id="A" name="A" min="0" value="0" class="input">
-                    </div>
-                </div>
-                <div class="input-container">
-                    <div class="input-layer">
-                        <div class="glow"></div>
-                        <label for="B">B Grade</label>
-                        <input type="number" id="B" name="B" min="0" value="0" class="input">
-                    </div>
-                </div>
-                <div class="input-container">
-                    <div class="input-layer">
-                        <div class="glow"></div>
-                        <label for="C">C Grade</label>
-                        <input type="number" id="C" name="C" min="0" value="0" class="input">
-                    </div>
-                </div>
-                <div class="input-container">
-                    <div class="input-layer">
-                        <div class="glow"></div>
-                        <label for="D">D Grade</label>
-                        <input type="number" id="D" name="D" min="0" value="0" class="input">
-                    </div>
-                </div>
-                <div class="input-container">
-                    <div class="input-layer">
-                        <div class="glow"></div>
-                        <label for="E">E Grade</label>
-                        <input type="number" id="E" name="E" min="0" value="0" class="input">
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="Btn-Container" onclick="calculateCGPA()">
-                <span class="text">Calculate CGPA</span>
-                <span class="icon-Container">
-                    <svg
-                        width="16"
-                        height="19"
-                        viewBox="0 0 16 19"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
-                        <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
-                        <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
-                        <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
-                        <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
-                        <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
-                    </svg>
-                </span>
-            </button>
-        </form>
-        <div id="result">
-            <h2>CGPA:</h2>
-            <div id="cgpa-value-container">
-                <p id="cgpa-value">0.00</p>
-            </div>
-        </div>
-        <script src="script.js"></script>
+  <div class="container">
+    <img src="logo.png" alt="SIMATS Engineering Logo" class="logo">
+    <h1>CGPA Calculator</h1>
+    <form id="cgpa-form">
+      <div class="input-container">
+        <label for="sgrade">S Grade</label>
+        <input type="number" id="sgrade" class="input" value="0" />
+      </div>
+      <div class="input-container">
+        <label for="agrade">A Grade</label>
+        <input type="number" id="agrade" class="input" value="0" />
+      </div>
+      <div class="input-container">
+        <label for="bgrade">B Grade</label>
+        <input type="number" id="bgrade" class="input" value="0" />
+      </div>
+      <div class="input-container">
+        <label for="cgrade">C Grade</label>
+        <input type="number" id="cgrade" class="input" value="0" />
+      </div>
+      <div class="input-container">
+        <label for="dgrade">D Grade</label>
+        <input type="number" id="dgrade" class="input" value="0" />
+      </div>
+      <div class="input-container">
+        <label for="egrade">E Grade</label>
+        <input type="number" id="egrade" class="input" value="0" />
+      </div>
+      <button type="button" class="Btn-Container" onclick="calculateCGPA()">Calculate CGPA</button>
+    </form>
+    <div id="result">
+      <div id="cgpa-value-container">
+        <span id="cgpa-value">0.00</span>
+      </div>
     </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
