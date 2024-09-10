@@ -215,10 +215,51 @@ form {
     margin: 0; /* Remove default margin */
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 480px) {
     .container {
-        width: 90vw; /* Adjust width for smaller screens */
+        width: 95vw; /* Ensure the container takes up almost the full screen width */
         padding: 10px; /* Reduce padding */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Lighter shadow for mobile */
+    }
+
+    form, .input-wrapper {
+        gap: 10px; /* Reduce space between input fields */
+    }
+
+    .logo {
+        width: 150px; /* Reduce logo size */
+        margin-bottom: 10px; /* Reduce space below the logo */
+    }
+
+    .input {
+        height: 50px; /* Reduce input height */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .Btn-Container {
+        margin-top: 15px; /* Adjust button margin for smaller screens */
+        height: 40px; /* Slightly reduce button height */
+    }
+
+    .text {
+        font-size: 0.9em; /* Adjust button text size */
+    }
+
+    .icon-Container {
+        width: 30px; /* Reduce icon size */
+        height: 30px;
+    }
+
+    .glow {
+        max-height: 80px; /* Adjust glow size */
+        max-width: 250px;
+        filter: blur(20px); /* Reduce blur intensity */
+    }
+
+    .glow::before {
+        width: 500px; /* Smaller glow size */
+        height: 500px;
+        filter: blur(20px); /* Reduce blur */
     }
 }
