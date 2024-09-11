@@ -51,8 +51,8 @@ body {
   
   /* Styling for logo */
   .logo {
-    width: 150px; /* Increase size to fit container */
-    margin-bottom: 20px;
+    width: 250px; /* Increase size to fit container */
+    margin-bottom: -10px;
   }
   
   /* Heading Styling */
