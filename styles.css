@@ -21,6 +21,10 @@ body {
     align-items: center;
     animation: move 4s linear infinite;
   }
+
+  .input-container label {
+    color: white;
+  }
   
   @keyframes move {
     0% {
