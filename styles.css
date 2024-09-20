@@ -43,11 +43,12 @@ body {
     padding: 30px;
     width: 100%;
     max-width: 400px; /* Adjusted for desktop */
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5), 
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5),
                 inset 1px 1px 8px rgba(255, 255, 255, 0.2); /* Outer shadow */
     text-align: center;
     margin: 0 10px; /* Margin for mobile responsiveness */
-  }
+    box-sizing: border-box; /* Ensure padding is part of the width calculation */
+}
   
   /* Styling for logo */
   .logo {
@@ -143,4 +144,21 @@ body {
       font-size: 1rem;
     }
   }
-  
+
+/* Center the credits text within the container */
+.credits {
+  margin-top: 20px; /* Add space above the credits */
+  text-align: center;
+  font-size: 1rem;
+  width: 100%; /* Ensure it takes full width of the container */
+  color: white; /* Make the text color white for better visibility */
+}
+
+/* Adjust for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .credits {
+      font-size: 0.9rem;
+      bottom: 10px; /* Bring it closer to the bottom for small screens */
+      padding-top: 2px; /* Slightly reduce the padding on smaller screens */
+  }
+}
