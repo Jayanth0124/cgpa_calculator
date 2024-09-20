@@ -162,3 +162,14 @@ body {
       padding-top: 2px; /* Slightly reduce the padding on smaller screens */
   }
 }
+
+/* Styling for the credits section link */
+.credits a {
+  color: skyblue; /* Set the text color to sky blue */
+  text-decoration: underline; /* Underline the text */
+}
+
+.credits a:hover {
+  text-decoration: none; /* Remove underline on hover, if you prefer */
+}
+
